@@ -1,0 +1,179 @@
+labels:
+  0: 'noise'
+  1: 'animal'
+  2: 'human.pedestrian.adult'
+  3: 'human.pedestrian.child'
+  4: 'human.pedestrian.construction_worker'
+  5: 'human.pedestrian.personal_mobility'
+  6: 'human.pedestrian.police_officer'
+  7: 'human.pedestrian.stroller'
+  8: 'human.pedestrian.wheelchair'
+  9: 'movable_object.barrier'
+  10: 'movable_object.debris'
+  11: 'movable_object.pushable_pullable'
+  12: 'movable_object.trafficcone'
+  13: 'static_object.bicycle_rack'
+  14: 'vehicle.bicycle'
+  15: 'vehicle.bus.bendy'
+  16: 'vehicle.bus.rigid'
+  17: 'vehicle.car'
+  18: 'vehicle.construction'
+  19: 'vehicle.emergency.ambulance'
+  20: 'vehicle.emergency.police'
+  21: 'vehicle.motorcycle'
+  22: 'vehicle.trailer'
+  23: 'vehicle.truck'
+  24: 'flat.driveable_surface'
+  25: 'flat.other'
+  26: 'flat.sidewalk'
+  27: 'flat.terrain'
+  28: 'static.manmade'
+  29: 'static.other'
+  30: 'static.vegetation'
+  31: 'vehicle.ego'
+
+# from https://github.com/nutonomy/nuscenes-devkit/blob/master/python-sdk/nuscenes/utils/color_map.py 
+classname_to_color: # Note, RGB
+  "noise": (0, 0, 0)  # Black.
+  "animal": (70, 130, 180)  # Steelblue
+  "human.pedestrian.adult": (0, 0, 230)  # Blue
+  "human.pedestrian.child": (135, 206, 235)  # Skyblue,
+  "human.pedestrian.construction_worker": (100, 149, 237)  # Cornflowerblue
+  "human.pedestrian.personal_mobility": (219, 112, 147)  # Palevioletred
+  "human.pedestrian.police_officer": (0, 0, 128)  # Navy,
+  "human.pedestrian.stroller": (240, 128, 128), # Lightcoral
+  "human.pedestrian.wheelchair": (138, 43, 226)  # Blueviolet
+  "movable_object.barrier": (112, 128, 144)  # Slategrey
+  "movable_object.debris": (210, 105, 30)  # Chocolate
+  "movable_object.pushable_pullable": (105, 105, 105)  # Dimgrey
+  "movable_object.trafficcone": (47, 79, 79)  # Darkslategrey
+  "static_object.bicycle_rack": (188, 143, (112, 128, 144))  # Rosybrown
+  "vehicle.bicycle": (220, 20, 60)  # Crimson
+  "vehicle.bus.bendy": (255, 127, 80)  # Coral
+  "vehicle.bus.rigid": (255, 69, 0)  # Orangered
+  "vehicle.car": (255, 158, 0)  # Orange
+  "vehicle.construction": (233, 150, 70)  # Darksalmon
+  "vehicle.emergency.ambulance": (255, 83, 0)
+  "vehicle.emergency.police": (255, 215, 0) # Gold
+  "vehicle.motorcycle": (255, 61, 99)  # Red
+  "vehicle.trailer": (255, 140, 0)  # Darkorange
+  "vehicle.truck": (255, 99, 71)  # Tomato
+  "flat.driveable_surface": (0, 207, 191)  # nuTonomy green
+  "flat.other": (175, 0, 75)
+  "flat.sidewalk": (75, 0, 75)
+  "flat.terrain": (112, 180, 60)
+  "static.manmade": (222, 184, 135)  # Burlywood
+  "static.other": (255, 228, 196)  # Bisque
+  "static.vegetation": (0, 175, 0)  # Green
+  "vehicle.ego": (255, 240, 245)
+
+color_map_17: # Note, BGR
+  0: [0, 0, 0]        # noise black
+  1: [144, 128, 112]  # barrier Slategrey
+  2: [60, 20, 220]    # bicycle Crimson
+  3: [0, 69, 255]  # bus Orangered
+  4: [0, 158, 255]  # car Orange
+  5: [70, 150, 233]  # construction_vehicle Darksalmon
+  6: [99, 61, 255]    # motorcycle Red
+  7: [230, 0, 0]    # pedestrian blue # buggy: multiple blue mapped to single for pedestrains
+  8: [79, 79, 47]   # traffic_cone Darkslategrey
+  9: [0, 140, 255]  # trailer Darkorange
+  10: [71, 99, 255] # truck Tomato
+  11: [191, 207, 0]   # driveable_surface nuTonomy green
+  12: [75, 0, 175]    # other_flat 紫红色
+  13: [75, 0, 75] #  sidewalk
+  14: [60, 180, 112]  # terrain
+  15: [135, 184, 222]  # manmade Burlywood
+  16: [0, 175, 0]     # vegetation Green 深绿色
+
+labels_17:
+  0: 'noise'
+  1: 'barrier'
+  2: 'bicycle'
+  3: 'bus'
+  4: 'car'
+  5: 'construction_vehicle'
+  6: 'motorcycle'
+  7: 'pedestrian'
+  8: 'traffic_cone'
+  9: 'trailer'
+  10: 'truck'
+  11: 'driveable_surface'
+  12: 'other_flat'
+  13: 'sidewalk'
+  14: 'terrain'
+  15: 'manmade'
+  16: 'vegetation'
+
+learning_map:
+  1: 0
+  5: 0
+  7: 0
+  8: 0
+  10: 0
+  11: 0
+  13: 0
+  19: 0
+  20: 0
+  0: 0
+  29: 0
+  31: 0
+  9: 1
+  14: 2
+  15: 3
+  16: 3
+  17: 4
+  18: 5
+  21: 6
+  2: 7
+  3: 7
+  4: 7
+  6: 7
+  12: 8
+  22: 9
+  23: 10
+  24: 11
+  25: 12
+  26: 13
+  27: 14
+  28: 15
+  30: 16
+
+inverse_learning_map:
+  0: 0
+  1: 9
+  2: 14
+  3: 15
+  3: 16
+  4: 17
+  5: 18
+  6: 21
+  7: 2
+  8: 12
+  9: 22
+  10: 23
+  11: 24
+  12: 25
+  13: 26
+  14: 27
+  15: 28
+  16: 30
+
+thing_class: # thing class in panoptic segmentation
+  0: False      # "null areas"
+  1: True     # "barrier"
+  2: True     # "bicycle"
+  3: True     # "bus"
+  4: True     # "car"
+  5: True     # "construction_vehicle"
+  6: True     # "motorcycle"
+  7: True     # "pedestrian"
+  8: True     # "traffic_cone"
+  9: True     # "trailer"
+  10: True    # "truck"
+  11: False    # "driveable_surface"
+  12: False    # "other_flat"
+  13: False    # "sidewalk"
+  14: False    # "terrain"
+  15: False    # "manmade"
+  16: False    # "vegetation"
